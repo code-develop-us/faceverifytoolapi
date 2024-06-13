@@ -8,7 +8,7 @@ from numpy import asarray
 
 app =Flask(__name__)
 
-@app.route('/',methods=['GET'])
+@app.route('/',methods=['POST'])
 def main():
     img1Path=request.json['img1Path']
     img2Base64String=request.json['img2Base64']
