@@ -10,7 +10,7 @@ from numpy import asarray
 app =Flask(__name__)
 
 
-@app.route('/')
+@app.route('/',methods=["POST","GET"])
 def main():
     if(request.method=="POST"):
         img1Path=request.json['img1Path']
