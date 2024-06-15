@@ -1,6 +1,7 @@
 import base64
 from io import BytesIO
 import json
+import os
 from flask import Flask,request,jsonify
 
 app =Flask(__name__)
@@ -21,6 +22,6 @@ def main():
     # result = DeepFace.verify(img1_path=img1Path,img2_path=imgArray)
     # # print(json.dumps(result,indent=2))
     return jsonify({'result':'done'})
-
+port = int(os.environ.get('PORT', 5000))
 if __name__=='__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=port, debug=True)
