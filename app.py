@@ -1,6 +1,5 @@
 import base64
 from io import BytesIO
-import json
 import os
 from flask import Flask,request,jsonify
 from deepface import DeepFace
